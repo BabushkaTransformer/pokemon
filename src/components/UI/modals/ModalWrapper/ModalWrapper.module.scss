@@ -1,0 +1,53 @@
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 150ms ease;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.modal {
+  display: flex;
+  position: relative;
+  transform: scale(0.96);
+  transition: 150ms ease 0s;
+}
+
+.active {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+  transition: 150ms all;
+}
+
+.close {
+  position: absolute;
+  top: 13px;
+  right: -38px;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out 0s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.info {
+  position: relative;
+  width: 394px;
+  height:auto;
+  background: rgb(252, 252, 252);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
